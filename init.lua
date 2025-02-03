@@ -255,24 +255,6 @@ local function setup_lsp()
             },
         },
     })
-
-    require("lspconfig").clangd.setup({
-        cmd = { "/opt/homebrew/opt/llvm/bin/clangd" },
-    })
-
-    require("lspconfig").zls.setup({})
-
-    require("lspconfig").ruff.setup({})
-    require("lspconfig").pyright.setup({})
-
-    require("lspconfig").lua_ls.setup({
-        -- https://luals.github.io/wiki/settings
-        settings = {
-            Lua = {
-                workspace = { library = { vim.env.VIMRUNTIME } },
-            },
-        },
-    })
 end
 
 local function setup_treesitter()
